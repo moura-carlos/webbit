@@ -30,6 +30,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # webbit custom gems
 gem 'devise', '~> 4.8', '>= 4.8.1'
+# Upload files in your Ruby applications
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+gem 'mini_magick', '~> 4.11'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
