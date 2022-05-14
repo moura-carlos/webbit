@@ -1,4 +1,10 @@
 module.exports = {
+  mode: 'jit',
+  purge: [
+    './app/helpers/**/*.rb',
+    './app/javascript/**/*.js',
+    './app/views/**/*',
+  ],
   content: [
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
