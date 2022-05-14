@@ -26,7 +26,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
+# gem 'bootsnap', '>= 1.4.4', require: false
+gem 'bootsnap', '~> 1.9', '>= 1.9.4', require: false
 
 # webbit custom gems
 gem 'devise', '~> 4.8', '>= 4.8.1'
