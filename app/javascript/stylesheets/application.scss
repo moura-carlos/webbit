@@ -6,4 +6,9 @@
 @import "tailwindcss/utilities";
 
 /*importing icons component style (components/icons.scss)*/
+@import 'components/animation';
+@import 'components/base';
 @import 'components/icons';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
