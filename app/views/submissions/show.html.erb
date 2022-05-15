@@ -1,29 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
+<p id="notice"><%= notice %>
   <%= @submission.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
   <%= @submission.body %>
-</p>
-
-<p>
-  <strong>Url:</strong>
   <%= @submission.url %>
-</p>
+  <%= image_tag(@submission.submission_image.large.url, width: 400) if @submission.submission_image.present? %>
+  <%#= video_tag(@submission.submission_video) %>
 
-<p>
-  <strong>Submission Image:</strong>
-  <%= image_tag(@submission.submission_image.large.url, width: 400) %>
-</p>
-
-<p>
-  <strong>Submission Video:</strong>
-  <%= video_tag(@submission.submission_video) %>
-</p>
 
 <%= link_to 'Edit', edit_submission_path(@submission) %> |
 <%= link_to 'Back', submissions_path %>
