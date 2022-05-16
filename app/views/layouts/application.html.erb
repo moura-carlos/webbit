@@ -141,8 +141,10 @@
     <%#= end of community dropdown %>
     <%#= end of navigation itself %>
 
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    <%#= link_to "Sign out", destroy_user_session_path, method: :delete %>
 
-    <%= yield %>
+    <%= content_for?(:content) ? yield(:content) : yield %>
+
+    <%#= yield %>
   </body>
 </html>
