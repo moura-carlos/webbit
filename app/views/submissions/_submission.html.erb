@@ -13,7 +13,7 @@
       </h2>
       <div class="text-sm text-gray-700"><%= submission.body %></div>
       <%#= submission.url %>
-      <% if user_signed_in? && current_user.id == submission.user_id %>
+      <% if author_of?(submission) %>
         <%#= link_to 'Show', submission %>
         <div class="pt-2 flex fler-wrap items-center">
           <%= link_to edit_submission_path(submission) do %>
