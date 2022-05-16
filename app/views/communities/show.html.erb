@@ -1,6 +1,27 @@
-<% content_for :community_label, @community.name %>
+<% content_for :community_label, "w/#{@community.name}" %>
 
+<div class="bg-purple-600 text-white">
+  <div class="container lg:p-10 p-4">
+    <h1 class="lg:text-3xl text-lg font-bold">w/<%= @community.name %></h1>
+  </div>
+</div>
+
+<% content_for :primary_content do %>
+  <%# getting the submissions relative to this community - to the community we're currently in, because this is the show page - it shows info about a given community.  %>
+  <% @community.submissions.each do |submission| %>
+    <%# passing the submission related to the community to the partial submissions/_submission.html.erb and rendering its content %>
+    <%= render "/submissions/submission", submission: submission %>
+  <% end %>
+<% end %>
+
+<% content_for :secondary_content do %>
+  <%= render "sidebar", community: @community %>
+<% end %>
+
+<%= render "basic_layout" %>
 <!--<p id="notice"><%= notice %></p>-->
+
+<!--
 
 <p>
   <strong>Name:</strong>
@@ -24,3 +45,5 @@
 
 <%= link_to 'Edit', edit_community_path(@community) %> |
 <%= link_to 'Back', communities_path %>
+
+-->
