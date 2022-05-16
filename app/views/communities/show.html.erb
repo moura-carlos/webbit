@@ -1,10 +1,11 @@
 <% content_for :community_label, "w/#{@community.name}" %>
 
-<div class="bg-purple-600 text-white">
+<%= render "community_header", community: @community %>
+<!--<div class="bg-purple-600 text-white">
   <div class="container lg:p-10 p-4">
     <h1 class="lg:text-3xl text-lg font-bold">w/<%= @community.name %></h1>
   </div>
-</div>
+</div>-->
 
 <% content_for :primary_content do %>
   <%# getting the submissions relative to this community - to the community we're currently in, because this is the show page - it shows info about a given community.  %>
