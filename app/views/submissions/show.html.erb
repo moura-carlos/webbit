@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %>
+
+<% content_for :community_label, @submission.title %>
+
+<!--<p id="notice"><%= notice %>-->
   <%= @submission.title %>
   <%= @submission.body %>
   <%= @submission.url %>
