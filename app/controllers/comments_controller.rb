@@ -27,11 +27,11 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @comment = @submission.comments.find(params[:id])
+    #@comment = @submission.comments.find(params[:id])
   end
 
   def update
-    @comment = @submission.comments.find(params[:id])
+    #@comment = @submission.comments.find(params[:id])
     respond_to do |format|
       if @comment.update(comment_params)
         format.html { redirect_to submission_path(@submission), notice: "Comment was succesfully updated." }
@@ -43,7 +43,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = @submission.comments.find(params[:id])
+    #@comment = @submission.comments.find(params[:id])
     @comment.destroy
     redirect_to submission_path(@submission)
   end
@@ -55,7 +55,7 @@ class CommentsController < ApplicationController
     end
 
     def set_comment
-      @comment = Comment.find(params[:id])
+      @comment = @submission.comments.find(params[:id]) #Comment.find(params[:id])
     end
 
     def comment_params
