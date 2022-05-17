@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :communities
-  resources :submissions
+
+  resources :submissions do
+    resources :comments # now I can access submissions/1/comments for example
+  end
+
   devise_for :users
   # get 'home/index'
   # root to: 'home#index'
