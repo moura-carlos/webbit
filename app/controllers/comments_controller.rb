@@ -6,9 +6,6 @@ class CommentsController < ApplicationController
   def new
   end
 
-  def show
-  end
-
   def create
     @comment = @submission.comments.create(params[:comment].permit(:reply, :submission_id))
     @comment.user_id = current_user.id
@@ -26,8 +23,15 @@ class CommentsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def edit
     #@comment = @submission.comments.find(params[:id])
+    #@comment = Comment.find(params[:id])
+    respond_to do |format|
+      format.js # render edit.js.erb
+    end
   end
 
   def update
@@ -55,7 +59,7 @@ class CommentsController < ApplicationController
     end
 
     def set_comment
-      @comment = @submission.comments.find(params[:id]) #Comment.find(params[:id])
+      @comment = Comment.find(params[:id])
     end
 
     def comment_params
