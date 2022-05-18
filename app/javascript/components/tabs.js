@@ -3,10 +3,17 @@ document.addEventListener("turbolinks:load", () => {
   const text = document.querySelector('.text');
   const imageVideo = document.querySelector('.image_video');
   const url = document.querySelector('.url');
+  // user profile
+  const submissions = document.getElementById('profile_submissions')
+  const comments = document.getElementById('profile_comments')
 
   if (imageVideo != null || url != null){
     imageVideo.classList.add('hidden');
     url.classList.add('hidden');
+  }
+
+  if (comments != null) {
+    comments.classList.add('hidden');
   }
 
   function onTabClick(event) {
@@ -24,7 +31,9 @@ document.addEventListener("turbolinks:load", () => {
     const types = {
       text: "text",
       image_video: "image_video",
-      url: "url"
+      url: "url",
+      submissions: "profile_submissions",
+      comments: "profile_comments"
     }
 
     //Text
@@ -53,6 +62,17 @@ document.addEventListener("turbolinks:load", () => {
       imageVideo.classList.add('hidden');
 
       text.querySelector('textarea').value = "";
+    }
+
+    // Profile Submissions
+    if (event.target.parentElement.dataset.tab == types.submissions) {
+      submissions.classList.remove('hidden');
+      comments.classList.add('hidden');
+    }
+    // Profile Comments
+    if (event.target.parentElement.dataset.tab == types.comments) {
+      comments.classList.remove('hidden');
+      submissions.classList.add('hidden');
     }
   }
 
