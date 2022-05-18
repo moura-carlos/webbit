@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '~> 1.9', '>= 1.9.4', require: false
 
 # webbit custom gems
+# Gem for upvoting and downvoting
+gem 'acts_as_votable', '~> 0.13.2'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 # Upload files in your Ruby applications
 gem 'carrierwave', '~> 2.2', '>= 2.2.2'
