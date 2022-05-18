@@ -2,7 +2,16 @@ Rails.application.routes.draw do
   resources :communities
 
   resources :submissions do
-    resources :comments # now I can access submissions/1/comments for example
+    member do
+      put "upvote", to: "submissions#upvote"
+      put "downvote", to: "submissions#downvote"
+    end
+    resources :comments do # now I can access submissions/1/comments for example
+      member do
+        put "upvote", to: "comments#upvote"
+        put "downvote", to: "comments#downvote"
+      end
+    end
   end
 
   devise_for :users
