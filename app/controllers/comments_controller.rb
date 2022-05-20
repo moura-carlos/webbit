@@ -13,6 +13,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
+        SubmissionMailer.with(comment: @comment, submission: @submission).new_response.deliver_now
         format.html { redirect_to submission_path(@submission) }
         format.js # renders create.js.erb in app/views/comments
         format.json { render json: @comment, status: :created, location: @comment}
