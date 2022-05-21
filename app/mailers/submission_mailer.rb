@@ -4,6 +4,8 @@ class SubmissionMailer < ApplicationMailer
     @comment = params[:comment]
     @submission = params[:submission]
 
-    mail to: @submission.user.email, subject: "New response on #{@submission.title}" # targeting the person who own a given submission that was commented on.
+    if @submission.user.comment_subscription?
+      mail to: @submission.user.email, subject: "New response on #{@submission.title}" # targeting the person who own a given submission that was commented on.
+    end
   end
 end

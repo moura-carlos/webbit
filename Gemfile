@@ -38,6 +38,7 @@ gem 'carrierwave', '~> 2.2', '>= 2.2.2'
 gem 'mini_magick', '~> 4.11'
 gem 'valid_url', '~> 0.0.4'
 gem 'inline_svg', '~> 1.8'
+gem 'sidekiq', '~> 6.4', '>= 6.4.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
