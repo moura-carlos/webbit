@@ -36,6 +36,7 @@ gem 'mini_magick', '~> 4.11'
 gem 'valid_url', '~> 0.0.4'
 gem 'inline_svg', '~> 1.8'
 gem 'sidekiq', '~> 6.4', '>= 6.4.2'
+gem 'ransack', '~> 3.2'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
