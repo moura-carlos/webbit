@@ -5,6 +5,12 @@ class ApplicationController < ActionController::Base
   # thus it'll give us access to all the communities in our app.
   before_action :find_communities
 
+  def search
+    q = params[:q]
+    @community_results = Community.ransack(name_cont: q).result
+    @submission_results = Submission.ransack(title_cont: q).result
+    @user_results = User.ransack(username_cont: q).result
+  end
 
   protected
 
