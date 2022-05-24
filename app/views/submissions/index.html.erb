@@ -7,7 +7,11 @@
   <%# @submissions.each do |submission| %>
   <%# end %>
   <% if @submissions.exists? %>
-   <%= render @submissions %>
+    <% @submissions.each_with_index do |submission, index| %>
+      <%#= render @submissions %>
+      <%= inject_feed_ad(index) %>
+      <%= render "submissions/submission", submission: submission %>
+    <% end %>
   <% else %>
     <div class="p-10 text-center">
       <%= render_svg "icons/empty", styles: "inline fill-current text-gray-400 mb-2" %>

@@ -9,8 +9,9 @@
 
 <% content_for :primary_content do %>
   <%# getting the submissions relative to this community - to the community we're currently in, because this is the show page - it shows info about a given community.  %>
-  <% @community.submissions.each do |submission| %>
+  <% @community.submissions.each_with_index do |submission, index| %>
     <%# passing the submission related to the community to the partial submissions/_submission.html.erb and rendering its content %>
+    <%= inject_feed_ad(index) %>
     <%= render "/submissions/submission", submission: submission %>
   <% end %>
 <% end %>
