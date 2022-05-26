@@ -40,6 +40,8 @@ gem 'ransack', '~> 3.2'
 gem 'stripe', '~> 6.2'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 gem 'meta-tags', '~> 2.16'
+gem 'pagy', '~> 5.10', '>= 5.10.1'
+gem 'faker', '~> 2.21'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

@@ -1,4 +1,8 @@
 module.exports = {
+  experimental: {
+    applyComplexClasses: true,
+  },
+  mode: "jit",
   prefix: '',
   important: false,
   separator: ':',
