@@ -24,6 +24,6 @@ class SubscriptionsController < ApplicationController
   private
 
   def set_community
-    @community = Community.find(params[:community_id])
+    @community = Community.friendly.find(params[:community_id])
   end
 end
