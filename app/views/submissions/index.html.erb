@@ -1,3 +1,4 @@
+<% title "Submissions" %>
 <% content_for :community_label, "My Feed" %>
 
 <% content_for :primary_content do %>
@@ -9,7 +10,7 @@
   <% if @submissions.exists? %>
     <% @submissions.each_with_index do |submission, index| %>
       <%#= render @submissions %>
-      <%= inject_feed_ad(index) %>
+      <%= inject_feed_ad(index) unless active_subscriber? %>
       <%= render "submissions/submission", submission: submission %>
     <% end %>
   <% else %>

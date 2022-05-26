@@ -5,7 +5,7 @@ class SubmissionsController < ApplicationController
   # GET /submissions or /submissions.json
   def index
     if user_signed_in?
-      @submissions = current_user.subscribed_submissions
+      @submissions = current_user.subscribed_submissions.order("created_at desc")
     else
       @submissions = Submission.all
     end
@@ -104,7 +104,7 @@ class SubmissionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_submission
-      @submission = Submission.find(params[:id])
+      @submission = Submission.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

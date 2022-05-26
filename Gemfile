@@ -37,6 +37,9 @@ gem 'valid_url', '~> 0.0.4'
 gem 'inline_svg', '~> 1.8'
 gem 'sidekiq', '~> 6.4', '>= 6.4.2'
 gem 'ransack', '~> 3.2'
+gem 'stripe', '~> 6.2'
+gem 'friendly_id', '~> 5.4', '>= 5.4.2'
+gem 'meta-tags', '~> 2.16'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
@@ -54,6 +57,8 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'pry-rails', '~> 0.3.9'
+  gem 'solargraph', '~> 0.45.0'
 end
 
 group :test do
