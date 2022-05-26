@@ -1,0 +1,124 @@
+/*Pagy pagination custom style using Tailwind CSS*/
+.pagy-nav,
+.pagy-nav-js {
+  //@apply flex space-x-2;
+  display: flex;
+  margin-left: 0.5rem;
+  display: flex;
+}
+
+.pagy-nav .page a,
+.pagy-nav .page.active,
+.pagy-nav .page.prev.disabled,
+.pagy-nav .page.next.disabled,
+.pagy-nav-js .page a,
+.pagy-nav-js .page.active,
+.pagy-nav-js .page.prev.disabled,
+.pagy-nav-js .page.next.disabled {
+  // @apply block rounded-lg px-3 py-1 text-sm text-gray-500 font-semibold bg-gray-200 shadow-md;
+  display: block;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: #E5E7EB;
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  &:hover{
+    // @apply bg-gray-300;
+    background-color: rgb(209 213 219);
+  }
+  &:active{
+    // @apply bg-gray-400 text-white;
+    background-color: #9CA3AF;
+    color: #ffffff;
+  }
+}
+
+.pagy-nav .page.prev.disabled,
+.pagy-nav .page.next.disabled,
+.pagy-nav-js .page.prev.disabled,
+.pagy-nav-js .page.next.disabled {
+  //@apply text-gray-400 cursor-default;
+  color: #9CA3AF;
+  cursor: default;
+
+  &:hover {
+    // @apply text-gray-400 bg-gray-200;
+    background-color: #E5E7EB;
+    color: #9CA3AF;
+  }
+  &:active {
+    // @apply text-gray-400 bg-gray-200;
+    background-color: #E5E7EB;
+    color: #9CA3AF;
+  }
+}
+
+.pagy-nav .page.active,
+.pagy-nav-js .page.active {
+  // @apply text-white cursor-default bg-gray-400;
+  //background-color: #9CA3AF;
+  background-color: #805ad5;
+  color: #ffffff;
+  cursor: default;
+  &:hover {
+    // @apply text-white bg-gray-400;
+    color: #ffffff;
+    background-color: #9CA3AF;
+  }
+  &:active {
+    // @apply bg-gray-400 text-white;
+    //background-color: #9CA3AF;
+    background-color: #805ad5;
+    color: #ffffff;
+  }
+}
+
+
+.pagy-combo-nav-js {
+  // @apply flex max-w-max rounded-full px-3 py-1 text-sm text-gray-500 font-semibold bg-gray-200 shadow-md;
+  display: flex;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: #E5E7EB;
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  max-width: max-content;
+  border-radius: 9999px;
+}
+
+.pagy-combo-nav-js .pagy-combo-input {
+  // @apply bg-white px-2 rounded-sm
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 0.125rem;
+}
+
+.pagy-combo-nav-js .page.prev,
+.pagy-combo-nav-js .page.next {
+  &:hover {
+    // @apply text-gray-800;
+    color: rgb(31 41 55);
+  }
+  &:active {
+    // @apply text-gray-800;
+    color: rgb(31 41 55);
+  }
+}
+
+.pagy-combo-nav-js .page.prev.disabled,
+.pagy-combo-nav-js .page.next.disabled {
+  // @apply text-gray-400 cursor-default;
+  color: rgb(156 163 175);
+  cursor: default;
+}

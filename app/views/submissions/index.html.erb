@@ -42,3 +42,12 @@
 name of the file directly without typing in the name of the folder, when we do not pass
 the folder name rails goes into views/application folder automatically and grabs the content of the file. %>
 <%= render "basic_layout" %>
+<div class="flex flex-wrap px-2 lg:px-8 mt-2 lg:mt-8 container m-auto">
+  <div class="w-full md:w-2/3 pr-0 md:pr-6 mb-6">
+    <div>
+    <% if @submissions.exists? %>
+      <%== pagy_nav(@pagy) %>
+    <% end %>
+    </div>
+  </div>
+</div>

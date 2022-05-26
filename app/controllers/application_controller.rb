@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include Pagy::Backend
+
   before_action :configure_permitted_parameters, if: :devise_controller?
   # basically means: before this controller loads,
   # go ahead and find and execute the find_communites method.
