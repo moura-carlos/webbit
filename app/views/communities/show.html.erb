@@ -1,3 +1,4 @@
+<% title @community.name %>
 <% content_for :community_label, "w/#{@community.name}" %>
 
 <%= render "community_header", community: @community %>
@@ -11,7 +12,7 @@
   <%# getting the submissions relative to this community - to the community we're currently in, because this is the show page - it shows info about a given community.  %>
   <% @community.submissions.each_with_index do |submission, index| %>
     <%# passing the submission related to the community to the partial submissions/_submission.html.erb and rendering its content %>
-    <%= inject_feed_ad(index) %>
+    <%= inject_feed_ad(index) unless active_subscriber? %>
     <%= render "/submissions/submission", submission: submission %>
   <% end %>
 <% end %>

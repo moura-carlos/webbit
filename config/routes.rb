@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show], as: 'profile'
   # get 'home/index'
   # root to: 'home#index'
+  resources :premium
   root to: 'submissions#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
