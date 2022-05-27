@@ -94,7 +94,11 @@ class CommentsController < ApplicationController
     end
 
     def find_comment
-      @comment = @submission.friendly.comments.find(params[:id])
+      if upvote || downvote
+        @comment = @submission.comments.find(params[:id])
+      else
+        @comment = @submission.friendly.comments.find(params[:id])
+      end
     end
 
     def comment_params
