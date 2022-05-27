@@ -1,5 +1,5 @@
-const commentVote = document.querySelector('#comment-<%= @comment.id %> .js-votes');
-const dynamicNotice = document.querySelector(".js-notice");
+var commentVote = document.querySelector('#comment-<%= @comment.id %> .js-votes');
+var dynamicNotice = document.querySelector(".js-notice");
 commentVote.innerHTML = "<%= escape_javascript(@comment.total_vote_count) %>";
 
 dynamicNotice.innerHTML = `
