@@ -62,8 +62,8 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "webbit_production"
 
-  config.active_job.queue_adapter     = :sidekiq
-  config.active_job.queue_name_prefix = "webbit_production"
+  # config.active_job.queue_adapter     = :sidekiq
+  # config.active_job.queue_name_prefix = "webbit_production"
 
   config.action_mailer.perform_caching = false
 
