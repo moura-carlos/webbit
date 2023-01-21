@@ -7,7 +7,6 @@
 * [Features](#features)
 * [Modeling](#modeling)
 * [Status](#status)
-* [Inspiration](#inspiration)
 * [Testing the deployed application](#testing-the-deployed-application)
 ***
 ## General info
@@ -72,11 +71,11 @@ If you want to be able to use the Stripe Payment feature locally:
 ## Testing the deployed application
 * Go tho the website: [webbit.osc-fr1.scalingo.io](https://webbit.osc-fr1.scalingo.io/)
 * Login with the example info:
-    > Email: carlos@example.com
+    > Email: carlos@example.com\
     > Password: password
 * To "subscribe" to Webbit Premium you can use the following test information:
-    > Card number: 4242 4242 4242 4242
-     MM/YY: 04/24
-     CVC: 424
+    > Card number: 4242 4242 4242 4242\
+     MM/YY: 04/24\
+     CVC: 424\
      ZIP: 42424
 * Once you are subscribed to Webbit Premium you should be able to get rid of the ads.
