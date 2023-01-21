@@ -70,7 +70,7 @@ If you want to be able to use the Stripe Payment feature locally:
 * This project is complete, but I am still looking for new ways/features to improve it.
 ***
 ## Testing the deployed application
-* Go tho the website: salty-ridge-47981.herokuapp.com
+* Go tho the website: [webbit.osc-fr1.scalingo.io](https://webbit.osc-fr1.scalingo.io/)
 * Login with the example info:
     > Email: carlos@example.com
     > Password: password
