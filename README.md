@@ -2,6 +2,7 @@
 ---
 ## Table of contents
 * [General info](#general-info)
+* [Video - Testing the website](#video---testing-the-website)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
@@ -14,6 +15,13 @@
 A _nearly_ full-feature Reddit clone built with Ruby on Rails.
 This app is the result of a course called Hello Rails found at [hellorails.io](https://hellorails.io).
 ***
+## [Video](https://www.loom.com/share/52b527161bc3422e9b1dd9fba11ce6b4) - Testing the website
+
+
+https://user-images.githubusercontent.com/97359453/213887676-112ffccb-5e61-468c-9ea8-d29193645622.mp4
+
+
+---
 ## Technologies
 The project is created with/makes use of:
 * Bundler version 2.3.5
